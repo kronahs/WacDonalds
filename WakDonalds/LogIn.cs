@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace WakDonalds
 {
-    public partial class Form1 : Form
+    public partial class btnBurger : Form
     {
-        public Form1()
+        public btnBurger()
         {
             InitializeComponent();
         }
+
+
     }
 }
