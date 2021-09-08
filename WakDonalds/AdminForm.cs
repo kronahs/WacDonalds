@@ -34,7 +34,7 @@ namespace WakDonalds
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            btnBurger b = new btnBurger();
+            LogIn b = new LogIn();
             this.MdiParent = b;
         }
     }

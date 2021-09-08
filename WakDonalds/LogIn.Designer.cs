@@ -1,7 +1,7 @@
 ﻿
 namespace WakDonalds
 {
-    partial class btnBurger
+    partial class LogIn
     {
         /// <summary>
         /// Required designer variable.
@@ -31,13 +31,13 @@ namespace WakDonalds
         {
             this.components = new System.ComponentModel.Container();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnLogIn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,16 +45,6 @@ namespace WakDonalds
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::WakDonalds.Properties.Resources.wakDonalds_Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(86, 81);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // txtUserName
             // 
@@ -115,6 +105,7 @@ namespace WakDonalds
             this.btnLogIn.TabIndex = 7;
             this.btnLogIn.Text = "LogIn";
             this.btnLogIn.UseVisualStyleBackColor = false;
+            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
             // label3
             // 
@@ -126,6 +117,16 @@ namespace WakDonalds
             this.label3.Size = new System.Drawing.Size(112, 57);
             this.label3.TabIndex = 8;
             this.label3.Text = "LogIn";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WakDonalds.Properties.Resources.wakDonalds_Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(86, 81);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // btnBurger
             // 
@@ -143,6 +144,7 @@ namespace WakDonalds
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "btnBurger";
             this.Text = "WacDonalds";
+            this.Load += new System.EventHandler(this.btnBurger_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
