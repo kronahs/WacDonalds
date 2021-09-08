@@ -32,16 +32,16 @@ namespace WakDonalds
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnSides = new System.Windows.Forms.Button();
+            this.btnChicken = new System.Windows.Forms.Button();
+            this.btnSandwich = new System.Windows.Forms.Button();
+            this.btnPizza = new System.Windows.Forms.Button();
+            this.btnBurger = new System.Windows.Forms.Button();
+            this.btnBreakfast = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnBreakfast = new System.Windows.Forms.Button();
-            this.btnBurger = new System.Windows.Forms.Button();
-            this.btnPizza = new System.Windows.Forms.Button();
-            this.btnSandwich = new System.Windows.Forms.Button();
-            this.btnChicken = new System.Windows.Forms.Button();
-            this.btnSides = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -100,6 +100,108 @@ namespace WakDonalds
             this.tableLayoutPanel2.Size = new System.Drawing.Size(240, 600);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
+            // btnSides
+            // 
+            this.btnSides.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.btnSides.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSides.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSides.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(37)))), ((int)(((byte)(31)))));
+            this.btnSides.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSides.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSides.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(199)))), ((int)(((byte)(44)))));
+            this.btnSides.Location = new System.Drawing.Point(3, 516);
+            this.btnSides.Name = "btnSides";
+            this.btnSides.Size = new System.Drawing.Size(234, 81);
+            this.btnSides.TabIndex = 17;
+            this.btnSides.Text = "Sides";
+            this.btnSides.UseVisualStyleBackColor = false;
+            this.btnSides.Click += new System.EventHandler(this.btnSides_Click);
+            // 
+            // btnChicken
+            // 
+            this.btnChicken.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.btnChicken.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnChicken.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnChicken.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(37)))), ((int)(((byte)(31)))));
+            this.btnChicken.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChicken.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChicken.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(199)))), ((int)(((byte)(44)))));
+            this.btnChicken.Location = new System.Drawing.Point(3, 430);
+            this.btnChicken.Name = "btnChicken";
+            this.btnChicken.Size = new System.Drawing.Size(234, 80);
+            this.btnChicken.TabIndex = 16;
+            this.btnChicken.Text = "Chicken";
+            this.btnChicken.UseVisualStyleBackColor = false;
+            this.btnChicken.Click += new System.EventHandler(this.btnChicken_Click);
+            // 
+            // btnSandwich
+            // 
+            this.btnSandwich.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.btnSandwich.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSandwich.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSandwich.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(37)))), ((int)(((byte)(31)))));
+            this.btnSandwich.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSandwich.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSandwich.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(199)))), ((int)(((byte)(44)))));
+            this.btnSandwich.Location = new System.Drawing.Point(3, 344);
+            this.btnSandwich.Name = "btnSandwich";
+            this.btnSandwich.Size = new System.Drawing.Size(234, 80);
+            this.btnSandwich.TabIndex = 15;
+            this.btnSandwich.Text = "Sandwich";
+            this.btnSandwich.UseVisualStyleBackColor = false;
+            this.btnSandwich.Click += new System.EventHandler(this.btnSandwich_Click);
+            // 
+            // btnPizza
+            // 
+            this.btnPizza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.btnPizza.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnPizza.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnPizza.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(37)))), ((int)(((byte)(31)))));
+            this.btnPizza.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPizza.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPizza.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(199)))), ((int)(((byte)(44)))));
+            this.btnPizza.Location = new System.Drawing.Point(3, 258);
+            this.btnPizza.Name = "btnPizza";
+            this.btnPizza.Size = new System.Drawing.Size(234, 80);
+            this.btnPizza.TabIndex = 14;
+            this.btnPizza.Text = "Pizza";
+            this.btnPizza.UseVisualStyleBackColor = false;
+            this.btnPizza.Click += new System.EventHandler(this.btnPizza_Click);
+            // 
+            // btnBurger
+            // 
+            this.btnBurger.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.btnBurger.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnBurger.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnBurger.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(37)))), ((int)(((byte)(31)))));
+            this.btnBurger.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBurger.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBurger.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(199)))), ((int)(((byte)(44)))));
+            this.btnBurger.Location = new System.Drawing.Point(3, 177);
+            this.btnBurger.Name = "btnBurger";
+            this.btnBurger.Size = new System.Drawing.Size(234, 75);
+            this.btnBurger.TabIndex = 13;
+            this.btnBurger.Text = "Burger";
+            this.btnBurger.UseVisualStyleBackColor = false;
+            this.btnBurger.Click += new System.EventHandler(this.btnBurger_Click);
+            // 
+            // btnBreakfast
+            // 
+            this.btnBreakfast.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.btnBreakfast.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnBreakfast.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnBreakfast.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(37)))), ((int)(((byte)(31)))));
+            this.btnBreakfast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBreakfast.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBreakfast.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(199)))), ((int)(((byte)(44)))));
+            this.btnBreakfast.Location = new System.Drawing.Point(3, 103);
+            this.btnBreakfast.Name = "btnBreakfast";
+            this.btnBreakfast.Size = new System.Drawing.Size(234, 68);
+            this.btnBreakfast.TabIndex = 12;
+            this.btnBreakfast.Text = "Breakfast";
+            this.btnBreakfast.UseVisualStyleBackColor = false;
+            this.btnBreakfast.Click += new System.EventHandler(this.btnBreakfast_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -121,112 +223,6 @@ namespace WakDonalds
             this.label3.TabIndex = 10;
             this.label3.Text = "Waiter Form";
             // 
-            // btnBreakfast
-            // 
-            this.btnBreakfast.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.btnBreakfast.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnBreakfast.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnBreakfast.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(37)))), ((int)(((byte)(31)))));
-            this.btnBreakfast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBreakfast.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBreakfast.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(199)))), ((int)(((byte)(44)))));
-            this.btnBreakfast.Location = new System.Drawing.Point(3, 103);
-            this.btnBreakfast.Name = "btnBreakfast";
-            this.btnBreakfast.Size = new System.Drawing.Size(234, 68);
-            this.btnBreakfast.TabIndex = 12;
-            this.btnBreakfast.Text = "Breakfast";
-            this.btnBreakfast.UseVisualStyleBackColor = false;
-            this.btnBreakfast.Click += new System.EventHandler(this.btnBreakfast_Click);
-            // 
-            // btnBurger
-            // 
-            this.btnBurger.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.btnBurger.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnBurger.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnBurger.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(37)))), ((int)(((byte)(31)))));
-            this.btnBurger.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBurger.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBurger.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(199)))), ((int)(((byte)(44)))));
-            this.btnBurger.Location = new System.Drawing.Point(3, 177);
-            this.btnBurger.Name = "btnBurger";
-            this.btnBurger.Size = new System.Drawing.Size(234, 75);
-            this.btnBurger.TabIndex = 13;
-            this.btnBurger.Text = "Burger";
-            this.btnBurger.UseVisualStyleBackColor = false;
-            // 
-            // btnPizza
-            // 
-            this.btnPizza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.btnPizza.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnPizza.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnPizza.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(37)))), ((int)(((byte)(31)))));
-            this.btnPizza.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPizza.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPizza.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(199)))), ((int)(((byte)(44)))));
-            this.btnPizza.Location = new System.Drawing.Point(3, 258);
-            this.btnPizza.Name = "btnPizza";
-            this.btnPizza.Size = new System.Drawing.Size(234, 80);
-            this.btnPizza.TabIndex = 14;
-            this.btnPizza.Text = "Pizza";
-            this.btnPizza.UseVisualStyleBackColor = false;
-            // 
-            // btnSandwich
-            // 
-            this.btnSandwich.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.btnSandwich.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSandwich.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnSandwich.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(37)))), ((int)(((byte)(31)))));
-            this.btnSandwich.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSandwich.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSandwich.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(199)))), ((int)(((byte)(44)))));
-            this.btnSandwich.Location = new System.Drawing.Point(3, 344);
-            this.btnSandwich.Name = "btnSandwich";
-            this.btnSandwich.Size = new System.Drawing.Size(234, 80);
-            this.btnSandwich.TabIndex = 15;
-            this.btnSandwich.Text = "Sandwich";
-            this.btnSandwich.UseVisualStyleBackColor = false;
-            // 
-            // btnChicken
-            // 
-            this.btnChicken.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.btnChicken.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnChicken.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnChicken.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(37)))), ((int)(((byte)(31)))));
-            this.btnChicken.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChicken.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChicken.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(199)))), ((int)(((byte)(44)))));
-            this.btnChicken.Location = new System.Drawing.Point(3, 430);
-            this.btnChicken.Name = "btnChicken";
-            this.btnChicken.Size = new System.Drawing.Size(234, 80);
-            this.btnChicken.TabIndex = 16;
-            this.btnChicken.Text = "Chicken";
-            this.btnChicken.UseVisualStyleBackColor = false;
-            // 
-            // btnSides
-            // 
-            this.btnSides.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.btnSides.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSides.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnSides.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(37)))), ((int)(((byte)(31)))));
-            this.btnSides.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSides.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSides.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(199)))), ((int)(((byte)(44)))));
-            this.btnSides.Location = new System.Drawing.Point(3, 516);
-            this.btnSides.Name = "btnSides";
-            this.btnSides.Size = new System.Drawing.Size(234, 81);
-            this.btnSides.TabIndex = 17;
-            this.btnSides.Text = "Sides";
-            this.btnSides.UseVisualStyleBackColor = false;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(249, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(705, 600);
-            this.flowLayoutPanel1.TabIndex = 1;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WakDonalds.Properties.Resources.wakDonalds_Logo;
@@ -236,6 +232,15 @@ namespace WakDonalds
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(249, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(705, 600);
+            this.flowLayoutPanel1.TabIndex = 1;
             // 
             // WaiterForm
             // 

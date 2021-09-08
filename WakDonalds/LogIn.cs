@@ -14,7 +14,7 @@ namespace WakDonalds
     public partial class LogIn : Form
     {
         int userID;
-        string conStr = "Server=ILRIETICIPETTEF;Database=BillingApp;User Id=naod;Password=123;";
+        string conStr = "Server=ILRIETICIPETTEF;Database=BillingApp;Integrated Security=true;";
         public LogIn()
         {
             InitializeComponent();
