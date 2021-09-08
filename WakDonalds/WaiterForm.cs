@@ -70,11 +70,17 @@ namespace WakDonalds
         private void UserControl_Click(object sender, EventArgs e)
         {
             foodContainer obj = (foodContainer)sender;
+            /*
+                        pb_icon.Image = obj.Icon;
+                        lblTitle.Text = obj.Title;
+                        lblSubTitle.Text = obj.SubTitle;
+                        showPanel();*/
 
-            pb_icon.Image = obj.Icon;
-            lblTitle.Text = obj.Title;
-            lblSubTitle.Text = obj.SubTitle;
-            showPanel();
+            DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+            row.Cells[0].Value = obj.Title;
+            row.Cells[1].Value = obj.Price;
+            row.Cells[2].Value = obj.Availablity;
+            dataGridView1.Rows.Add(row);
         }
 
         private void btnBreakfast_Click(object sender, EventArgs e)
