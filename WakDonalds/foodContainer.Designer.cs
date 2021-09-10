@@ -48,6 +48,7 @@ namespace WakDonalds
             this.tableLayoutPanel1.Controls.Add(this.lblPrice, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblAvailable, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Enabled = false;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
@@ -76,6 +77,7 @@ namespace WakDonalds
             this.lblTitle.Size = new System.Drawing.Size(59, 37);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Title";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblPrice
             // 
@@ -106,6 +108,7 @@ namespace WakDonalds
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "foodContainer";
             this.Size = new System.Drawing.Size(314, 144);
+            this.Click += new System.EventHandler(this.foodContainer_Click);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);

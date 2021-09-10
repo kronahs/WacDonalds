@@ -13,14 +13,18 @@ namespace WakDonalds
 {
     public partial class WaiterForm : Form
     {
-        int size = 5;
+        //int size = 5;
+        int currentEmpID;
         string conStr = "Server=ILRIETICIPETTEF;Database=BillingApp;Integrated Security=true;";
+        double total = 0.0;
         /*        string[] title = new string[5] {"Big Mac","McDouble","Cheeseburger","Hamburger","Quarter Pounder"};
                 double[] price = new double[5] { 184.2, 64.11, 114.84, 114.84, 168.3 };
                 int[] available = new int[5] {0,1,1,0,0};*/
         public WaiterForm(int userID)
         {
             InitializeComponent();
+            timer1.Start();
+            currentEmpID = userID;
         }
 
         private void GenerateDynamicControl(int categNumber)
@@ -55,6 +59,7 @@ namespace WakDonalds
                             listItems[i].Price = double.Parse(row["Price"].ToString());
                             listItems[i].Availablity = Int32.Parse(row["Available"].ToString());
 
+                           
                             flowLayoutPanel1.Controls.Add(listItems[i]);
                             listItems[i].Click += new System.EventHandler(this.UserControl_Click);
                         }
@@ -69,18 +74,17 @@ namespace WakDonalds
 
         private void UserControl_Click(object sender, EventArgs e)
         {
+            //MessageBox.Show("Button Click");
             foodContainer obj = (foodContainer)sender;
-            /*
-                        pb_icon.Image = obj.Icon;
-                        lblTitle.Text = obj.Title;
-                        lblSubTitle.Text = obj.SubTitle;
-                        showPanel();*/
 
             DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[0].Clone();
             row.Cells[0].Value = obj.Title;
             row.Cells[1].Value = obj.Price;
             row.Cells[2].Value = obj.Availablity;
             dataGridView1.Rows.Add(row);
+
+            total += obj.Price;
+            lblTotal.Text = total.ToString();
         }
 
         private void btnBreakfast_Click(object sender, EventArgs e)
@@ -111,6 +115,46 @@ namespace WakDonalds
         private void btnSides_Click(object sender, EventArgs e)
         {
             GenerateDynamicControl(6);
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+            total = 0.0;
+            lblTotal.Text = total.ToString();
+        }
+
+        Bitmap bmp;
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            int height = dataGridView1.Height;
+            dataGridView1.Height = dataGridView1.RowCount * dataGridView1.RowTemplate.Height * 2;
+            bmp = new Bitmap(dataGridView1.Width, dataGridView1.Height);
+            dataGridView1.DrawToBitmap(bmp, new Rectangle(0, 0,dataGridView1.Width,dataGridView1.Height));
+
+            dataGridView1.Height = height;
+            printPreviewDialog1.ShowDialog();
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawImage(bmp,0,0);
+        }
+
+        private void WaiterForm_Load(object sender, EventArgs e)
+        {
+            //lblDate.Text = DateTime
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime dateTime = DateTime.Now;
+            lblDate.Text = dateTime.ToShortTimeString();
+        }
+
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

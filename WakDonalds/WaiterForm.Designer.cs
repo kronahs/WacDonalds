@@ -29,6 +29,9 @@ namespace WakDonalds
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WaiterForm));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -39,11 +42,26 @@ namespace WakDonalds
             this.btnBurger = new System.Windows.Forms.Button();
             this.btnBreakfast = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblDate = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.sub = new System.Windows.Forms.TableLayoutPanel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.btnPay = new System.Windows.Forms.Button();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.availability = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.food = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -51,6 +69,8 @@ namespace WakDonalds
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.sub.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -210,6 +230,7 @@ namespace WakDonalds
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.Controls.Add(this.lblDate);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -217,6 +238,17 @@ namespace WakDonalds
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(234, 94);
             this.panel2.TabIndex = 0;
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblDate.Location = new System.Drawing.Point(81, 54);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(41, 23);
+            this.lblDate.TabIndex = 11;
+            this.lblDate.Text = "date";
             // 
             // label3
             // 
@@ -240,7 +272,7 @@ namespace WakDonalds
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Silver;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(249, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -253,6 +285,7 @@ namespace WakDonalds
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.dataGridView1, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.sub, 0, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(960, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -264,12 +297,181 @@ namespace WakDonalds
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Gray;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.food,
+            this.price,
+            this.availability});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(199)))), ((int)(((byte)(44)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(317, 446);
+            this.dataGridView1.Size = new System.Drawing.Size(317, 445);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // sub
+            // 
+            this.sub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sub.ColumnCount = 2;
+            this.sub.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.sub.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.sub.Controls.Add(this.panel3, 0, 0);
+            this.sub.Controls.Add(this.button1, 0, 1);
+            this.sub.Controls.Add(this.btnCancel, 1, 1);
+            this.sub.Controls.Add(this.btnPrint, 0, 2);
+            this.sub.Controls.Add(this.btnPay, 1, 2);
+            this.sub.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sub.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sub.Location = new System.Drawing.Point(3, 454);
+            this.sub.Name = "sub";
+            this.sub.RowCount = 3;
+            this.sub.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.sub.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.sub.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.sub.Size = new System.Drawing.Size(317, 143);
+            this.sub.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sub.SetColumnSpan(this.panel3, 2);
+            this.panel3.Controls.Add(this.lblTotal);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(311, 41);
+            this.panel3.TabIndex = 0;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotal.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblTotal.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(199)))), ((int)(((byte)(44)))));
+            this.lblTotal.Location = new System.Drawing.Point(268, 0);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(43, 34);
+            this.lblTotal.TabIndex = 0;
+            this.lblTotal.Text = "0.0";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label1.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 34);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Total:";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(199)))), ((int)(((byte)(44)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Location = new System.Drawing.Point(3, 50);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(152, 41);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Undo";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(199)))), ((int)(((byte)(44)))));
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnCancel.Location = new System.Drawing.Point(161, 50);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(153, 41);
+            this.btnCancel.TabIndex = 2;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.btnPrint.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(199)))), ((int)(((byte)(44)))));
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnPrint.Location = new System.Drawing.Point(3, 97);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(152, 43);
+            this.btnPrint.TabIndex = 3;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // btnPay
+            // 
+            this.btnPay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.btnPay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnPay.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(199)))), ((int)(((byte)(44)))));
+            this.btnPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPay.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPay.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnPay.Location = new System.Drawing.Point(161, 97);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.Size = new System.Drawing.Size(153, 43);
+            this.btnPay.TabIndex = 4;
+            this.btnPay.Text = "Pay";
+            this.btnPay.UseVisualStyleBackColor = false;
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 300;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // availability
+            // 
+            this.availability.HeaderText = "Available";
+            this.availability.Name = "availability";
+            // 
+            // price
+            // 
+            this.price.HeaderText = "Price";
+            this.price.Name = "price";
+            // 
+            // food
+            // 
+            this.food.HeaderText = "Food";
+            this.food.Name = "food";
             // 
             // WaiterForm
             // 
@@ -279,13 +481,18 @@ namespace WakDonalds
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "WaiterForm";
             this.Text = "WaiterForm";
+            this.Load += new System.EventHandler(this.WaiterForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.sub.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -307,5 +514,20 @@ namespace WakDonalds
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TableLayoutPanel sub;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.Button btnPay;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn food;
+        private System.Windows.Forms.DataGridViewTextBoxColumn price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn availability;
     }
 }
